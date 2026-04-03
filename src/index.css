@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 199 89% 68%;
+    --foreground: 220 40% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 40% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 40% 13%;
+
+    --primary: 35 95% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 142 55% 49%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 199 60% 85%;
+    --muted-foreground: 220 20% 40%;
+
+    --accent: 354 70% 58%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 199 40% 80%;
+    --input: 199 40% 80%;
+    --ring: 35 95% 55%;
+
+    --radius: 1rem;
+
+    --sky-light: 199 92% 78%;
+    --sky-mid: 199 89% 68%;
+    --sky-deep: 210 78% 55%;
+    --sun: 42 100% 60%;
+    --sun-glow: 42 100% 75%;
+    --balloon-red: 354 70% 58%;
+    --balloon-yellow: 42 95% 58%;
+    --balloon-green: 142 55% 49%;
+    --balloon-blue: 199 80% 55%;
+    --balloon-orange: 25 90% 55%;
+    --cloud: 0 0% 100%;
+    --grass: 105 45% 48%;
+    --grass-light: 95 50% 60%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Quicksand', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Baloo 2', cursive;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  33% { transform: translateY(-15px) translateX(10px); }
+  66% { transform: translateY(-8px) translateX(-5px); }
+}
+
+@keyframes cloud-drift {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(calc(100vw + 100%)); }
+}
+
+@keyframes cloud-drift-reverse {
+  0% { transform: translateX(calc(100vw + 100%)); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes bounce-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes sun-pulse {
+  0%, 100% { transform: scale(1); filter: brightness(1); }
+  50% { transform: scale(1.05); filter: brightness(1.1); }
+}
