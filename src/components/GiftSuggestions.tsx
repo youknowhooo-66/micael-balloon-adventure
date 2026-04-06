@@ -47,7 +47,7 @@ const gifts: GiftItem[] = [
 ];
 
 const GiftSuggestions = () => (
-  <div className="bg-card/90 backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 max-w-2xl mx-auto border-4 border-secondary/30">
+  <div className="bg-card/35 backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 max-w-2xl mx-auto border-4 border-secondary/30">
     <div className="text-center mb-8">
       <div className="inline-flex items-center gap-2 bg-secondary/10 rounded-full px-5 py-2 mb-4">
         <Gift className="w-5 h-5 text-secondary" />

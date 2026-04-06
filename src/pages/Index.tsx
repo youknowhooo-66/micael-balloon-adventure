@@ -4,10 +4,11 @@ import Cloud from "@/components/Cloud";
 import Sun from "@/components/Sun";
 import InvitationCard from "@/components/InvitationCard";
 import GiftSuggestions from "@/components/GiftSuggestions";
-import skyBg from "@/assets/sky-background.jpg";
+import AdventurePage from "@/components/AdventurePage"; // Import the new component
+import skyBg from "@/assets/voltamundo.png";
 
 
-type Tab = "convite" | "sugestoes";
+type Tab = "convite" | "sugestoes" | "aventura"; // Add new tab type
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState<Tab>("convite");
@@ -20,7 +21,7 @@ const Index = () => {
         style={{ backgroundImage: `url(${skyBg})` }}
       />
       {/* Gradient overlay for readability */}
-      <div className="fixed inset-0 bg-gradient-to-b from-sky-deep/20 via-transparent to-grass/30" />
+      <div className="fixed inset-0 bg-gradient-to-b from-sky-deep/20 via-transparent to-grass/60" />
 
       {/* Sun */}
       <Sun className="fixed top-4 right-8 md:top-8 md:right-16 animate-sun-pulse z-10" />
@@ -81,11 +82,27 @@ const Index = () => {
           >
             🎁 Sugestões
           </button>
+          <button // New button for Adventure tab
+            onClick={() => setActiveTab("aventura")}
+            className={`px-6 py-2.5 rounded-full font-heading font-bold text-sm transition-all duration-300 ${
+              activeTab === "aventura"
+                ? "bg-accent text-accent-foreground shadow-md" // Use accent colors for this tab
+                : "text-foreground hover:bg-muted/60"
+            }`}
+          >
+            📸 Aventura
+          </button>
         </nav>
 
         {/* Tab content */}
         <div className="w-full max-w-2xl animate-in fade-in duration-500">
-          {activeTab === "convite" ? <InvitationCard /> : <GiftSuggestions />}
+          {activeTab === "convite" ? (
+            <InvitationCard />
+          ) : activeTab === "sugestoes" ? (
+            <GiftSuggestions />
+          ) : (
+            <AdventurePage /> // Render AdventurePage component
+          )}
         </div>
 
         {/* Footer */}
