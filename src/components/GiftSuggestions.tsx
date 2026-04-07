@@ -1,4 +1,6 @@
-import { ExternalLink, Gift } from "lucide-react";
+import { ExternalLink, Gift, MessageCircle } from "lucide-react";
+import { Button } from "./ui/button";
+import Sun from "./Sun";
 
 interface GiftItem {
   name: string;
@@ -71,7 +73,12 @@ const gifts: GiftItem[] = [
 ];
 
 const GiftSuggestions = () => (
-  <div className="bg-card/35 backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 max-w-2xl mx-auto border-4 border-secondary/30">
+  <div className="relative bg-card/35 backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 max-w-2xl mx-auto border-4 border-secondary/30 pt-16 md:pt-20 mt-12 md:mt-16 animate-in fade-in slide-in-from-bottom-10 zoom-in-95 duration-700 ease-out">
+    {/* Sun Icon */}
+    <div className="absolute -top-12 left-1/2 -translate-x-1/2 z-10 animate-sun-pulse">
+      <Sun className="w-24 h-24 md:w-32 md:h-32" />
+    </div>
+
     <div className="text-center mb-8">
       <div className="inline-flex items-center gap-2 bg-secondary/10 rounded-full px-5 py-2 mb-4">
         <Gift className="w-5 h-5 text-secondary" />
@@ -111,9 +118,35 @@ const GiftSuggestions = () => (
       ))}
     </div>
 
-    <p className="text-center text-sm text-muted-foreground font-body mt-6">
-      Sua presença já é o melhor presente! 💛
-    </p>
+    <div className="mt-10 space-y-6 text-center border-t border-secondary/20 pt-8">
+      <div className="space-y-2">
+        <p className="font-heading font-bold text-foreground">
+          Dúvidas sobre o envio? 📦
+        </p>
+        <p className="text-sm text-muted-foreground font-body px-4">
+          Clique no botão abaixo para conversar conosco e obter informações sobre o endereço de entrega ou outras dúvidas.
+        </p>
+      </div>
+      
+      <Button 
+        asChild
+        className="rounded-full bg-green-500 hover:bg-green-600 text-white font-bold py-6 px-8 h-auto shadow-lg hover:shadow-green-200 transition-all hover:-translate-y-1"
+      >
+        <a 
+          href="https://wa.me/5548988609123?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20como%20enviar%20un%20presente%20para%20o%20Micael!%20🎁" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center gap-2"
+        >
+          <MessageCircle className="w-5 h-5" />
+          Informações de Entrega
+        </a>
+      </Button>
+
+      <p className="text-sm text-muted-foreground font-body italic">
+        Sua presença já é o melhor presente! 💛
+      </p>
+    </div>
   </div>
 );
 

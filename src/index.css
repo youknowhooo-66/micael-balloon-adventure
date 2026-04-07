@@ -75,37 +75,45 @@
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+  0%, 100% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-30px) rotate(1deg); }
 }
 
 @keyframes float-slow {
-  0%, 100% { transform: translateY(0px) translateX(0px); }
-  33% { transform: translateY(-15px) translateX(10px); }
-  66% { transform: translateY(-8px) translateX(-5px); }
+  0%, 100% { transform: translateY(0px) translateX(0px) rotate(1deg); }
+  33% { transform: translateY(-20px) translateX(15px) rotate(-1deg); }
+  66% { transform: translateY(-10px) translateX(-10px) rotate(0.5deg); }
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-3deg) translateX(-10px); }
+  50% { transform: rotate(3deg) translateX(10px); }
 }
 
 @keyframes cloud-drift {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(calc(100vw + 100%)); }
+  0% { transform: translateX(-120%) translateY(0); }
+  100% { transform: translateX(calc(100vw + 120%)) translateY(20px); }
 }
 
 @keyframes cloud-drift-reverse {
-  0% { transform: translateX(calc(100vw + 100%)); }
-  100% { transform: translateX(-100%); }
+  0% { transform: translateX(calc(100vw + 120%)) translateY(0); }
+  100% { transform: translateX(-120%) translateY(-20px); }
 }
 
-@keyframes sparkle {
-  0%, 100% { opacity: 0.3; transform: scale(0.8); }
-  50% { opacity: 1; transform: scale(1.2); }
+@keyframes birds-fly {
+  0% { transform: translateX(-100%) translateY(0); }
+  100% { transform: translateX(calc(100vw + 100%)) translateY(-50px); }
 }
 
-@keyframes bounce-gentle {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+.blur-sm-custom {
+  filter: blur(2px);
+}
+
+.blur-md-custom {
+  filter: blur(4px);
 }
 
 @keyframes sun-pulse {
-  0%, 100% { transform: scale(1); filter: brightness(1); }
-  50% { transform: scale(1.05); filter: brightness(1.1); }
+  0%, 100% { transform: scale(1); filter: brightness(1) drop-shadow(0 0 20px rgba(255, 200, 0, 0.4)); }
+  50% { transform: scale(1.05); filter: brightness(1.1) drop-shadow(0 0 40px rgba(255, 200, 0, 0.6)); }
 }
