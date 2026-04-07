@@ -1,11 +1,11 @@
-import { CalendarDays, Clock, MapPin, PartyPopper } from "lucide-react";
+import { CalendarDays, Clock, MapPin, Cake } from "lucide-react";
 import perfilPic from "../assets/perfil.jpg"; // Import the new image
 
 const InvitationCard = () => (
   <div className="bg-card/45 backdrop-blur-sm  rounded-3xl shadow-2xl p-8 md:p-12 max-w-xl mx-auto text-center border-4 border-sun/30">
     {/* Badge */}
     <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-5 py-2 mb-4">
-      <PartyPopper className="w-5 h-5 text-primary" />
+      <Cake className="w-5 h-5 text-primary" />
       <span className=" font-semibold bg-gradient-to-l from-yellow-500 via-blue-500  via-green-500 to-purple-500 bg-clip-text text-transparent font-body uppercase tracking-wider">
         Volta ao Mundo num Balão!
       </span>
