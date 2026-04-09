@@ -69,24 +69,25 @@ const Countdown = () => {
           { label: "Horas", value: hours },
           { label: "Min", value: minutes },
           { label: "Seg", value: seconds },
-        ].map((item, index) => (
-          <div key={item.label} className="relative group animate-float" style={{ animationDelay: `${index * 0.2}s` }}>
-            <div className="bg-card/40 backdrop-blur-md rounded-2xl p-3 md:p-4 border-2 border-primary/10 shadow-sm transition-all duration-300 group-hover:border-primary/30 group-hover:shadow-md group-hover:-translate-y-2 hover:scale-105">
-              <div key={item.value} className="text-3xl md:text-4xl font-bold font-sans text-secondary tabular-nums tracking-tight animate-flip-in-ver">
-                {item.value.toString().padStart(2, "0")}
-              </div>
-              <div className="text-[10px] md:text-xs text-muted-foreground font-heading font-bold uppercase tracking-tighter mt-1">
-                {item.label}
+        // ...
+                ].map((item, index) => (
+                  <div key={item.label} className="relative group animate-float-subtle" style={{ animationDelay: `${index * 0.2}s` }}>
+                    <div className="bg-card/40 backdrop-blur-md rounded-2xl p-3 md:p-4 border-2 border-primary/10 shadow-sm transition-all duration-300 group-hover:border-primary/30 group-hover:shadow-md group-hover:-translate-y-2 hover:scale-105">
+                      <div key={item.value} className="text-3xl md:text-4xl font-bold font-sans text-secondary tabular-nums tracking-tight animate-flip-in-ver">
+                        {item.value.toString().padStart(2, "0")}
+                      </div>
+                      <div className="text-[10px] md:text-xs text-muted-foreground font-heading font-bold uppercase tracking-tighter mt-1">
+                        {item.label}
+                      </div>
+                    </div>
+                    {/* Decorative dot */}
+                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-primary/20" />
+                  </div>
+                ))}
               </div>
             </div>
-            {/* Decorative dot */}
-            <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-primary/20" />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
+          );
+        };
 
 export default Countdown;
 
