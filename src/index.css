@@ -117,3 +117,17 @@
   0%, 100% { transform: scale(1); filter: brightness(1) drop-shadow(0 0 20px rgba(255, 200, 0, 0.4)); }
   50% { transform: scale(1.05); filter: brightness(1.1) drop-shadow(0 0 40px rgba(255, 200, 0, 0.6)); }
 }
+
+@keyframes flip-in-ver {
+  0% { opacity: 0; transform: translateY(-20px) rotateX(90deg); }
+  100% { opacity: 1; transform: translateY(0) rotateX(0deg); }
+}
+
+@keyframes pulse-expand {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.2); opacity: 1; }
+}
+
+.animate-pulse-expand {
+  animation: pulse-expand 2s ease-in-out infinite;
+}

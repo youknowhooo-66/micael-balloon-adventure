@@ -1,8 +1,13 @@
 import React from "react";
-import { PartyPopper, Star, Heart, Camera, Gift, Baby, Music, Cloud, Sun as SunIcon, Map, Compass, Tent, Trees } from "lucide-react";
+import { 
+  PartyPopper, Star, Heart, Camera, Gift, Baby, Music, Cloud, 
+  Sun as SunIcon, Map, Compass, Tent, Trees, Eye, Moon, 
+  Lightbulb, MessageCircle, Sunset, Ghost, Sparkles, MapPin, 
+  ThermometerSnowflake, User, MoonStar, Plane, Layout, Users
+} from "lucide-react";
 import Sun from "./Sun";
 
-// Import all 14 images from assets
+// Import all images from assets
 import img1 from "../assets/1.jpeg";
 import img2 from "../assets/2.jpeg";
 import img3 from "../assets/3.jpeg";
@@ -17,14 +22,20 @@ import img11 from "../assets/11.jpeg";
 import img12 from "../assets/12.jpeg";
 import img13 from "../assets/13.jpeg";
 import img14 from "../assets/14.jpeg";
+import img15 from "../assets/15.jpeg";
+import img16 from "../assets/16.jpeg";
+import img17 from "../assets/17.jpeg";
+import img18 from "../assets/18.jpeg";
+import img19 from "../assets/19.jpeg";
+import img20 from "../assets/20.jpeg";
+import img21 from "../assets/21.jpeg";
 
 const AdventurePage = () => {
   const timelineEvents = [
     {
       id: 1,
       title: "O Grande Começo!",
-      date: "Primeiros Dias",
-      image: img1,
+      image: img14,
       description: "Nossa maior aventura começou! O pequeno Micael chegou para encher nossas vidas de luz.",
       icon: <Baby className="w-6 h-6" />,
       color: "bg-balloon-red",
@@ -32,52 +43,46 @@ const AdventurePage = () => {
     {
       id: 2,
       title: "Primeiras descobertas",
-      date: "1 Mês",
-      image: img2,
+      image: img1,
       description: "Nosso aventureiro completa seu primeiro mês de vida com muita saude.",
-      icon: <Cloud className="w-6 h-6" />,
+      icon: <Compass className="w-6 h-6" />,
       color: "bg-balloon-blue"
     },
     {
       id: 3,
       title: "Olhos Curiosos",
-      date: "1 Meses",
       image: img3,
       description: "Cada olhar é uma nova descoberta no vasto mundo ao seu redor.",
-      icon: <Star className="w-6 h-6" />,
+      icon: <Eye className="w-6 h-6" />,
       color: "bg-balloon-green"
     },
     {
       id: 4,
       title: "Momentos de Serenidade",
-      date: "1 Meses",
       image: img4,
       description: "Entre sonecas e carinhos, Micael encontra a paz em cada momento de serenidade.",
-      icon: <SunIcon className="w-6 h-6" />,
+      icon: <Moon className="w-6 h-6" />,
       color: "bg-balloon-orange"
     },
     {
       id: 5,
       title: "Companheiro de Brincadeiras",
-      date: "1 Meses",
       image: img5,
       description: "Ian Henrique, o irmão mais velho, já é o melhor amigo e parceiro de brincadeiras do Micael.",
-      icon: <Gift className="w-6 h-6" />,
+      icon: <Users className="w-6 h-6" />,
       color: "bg-balloon-yellow"
     },
     {
       id: 6,
       title: "Explorador Iluminado",
-      date: "2 Meses",
       image: img6,
       description: "O nosso aventureiro começa a explorar o mundo com mais confiança e curiosidade completando seu segundo mês.",
-      icon: <Compass className="w-6 h-6" />,
+      icon: <Lightbulb className="w-6 h-6" />,
       color: "bg-balloon-red"
     },
     {
       id: 7,
       title: "Sons e Ritmos",
-      date: "2 Meses",
       image: img7,
       description: "Micael descobrindo os sons e o ritmo da sua própria trilha sonora. Tarde em familia na praia",
       icon: <Music className="w-6 h-6" />,
@@ -86,56 +91,98 @@ const AdventurePage = () => {
     {
       id: 8,
       title: "Conversa de Rapazes",
-      date: "2 Meses",
       image: img8,
       description: "Com seu tio Macauly e seu irmão Ian, Micael compartilha momentos de diversão e aprendizado.",
-      icon: <Map className="w-6 h-6" />,
+      icon: <MessageCircle className="w-6 h-6" />,
       color: "bg-balloon-green"
     },
     {
       id: 9,
       title: "Por do Sol com Mamãe",
-      date: "8 Meses",
       image: img9,
       description: "Aproveitando um lindo por do sol com a mamãe, um momento de conexão e beleza na jornada do Micael.",
-      icon: <Trees className="w-6 h-6" />,
+      icon: <Sunset className="w-6 h-6" />,
       color: "bg-balloon-orange"
     },
     {
       id: 10,
       title: "Hora da Bagunça",
-      date: "9 Meses",
       image: img10,
       description: "O aventureiro dispensa modos e se entrega a diversão.",
-      icon: <Heart className="w-6 h-6" />,
+      icon: <Ghost className="w-6 h-6" />,
       color: "bg-balloon-yellow"
     },
     {
       id: 11,
       title: "Dentinhos Inquietos!",
-      date: "10 Meses",
       image: img11,
       description: "Os primeiros dentinhos do Micael estão chegando, trazendo um pouco de inquietação, mas muita fofura para a nossa aventura.",
-      icon: <Tent className="w-6 h-6" />,
+      icon: <Sparkles className="w-6 h-6" />,
       color: "bg-balloon-red"
     },
     {
       id: 12,
       title: "Passeios e Aventuras",
-      date: "10 Meses",
       image: img12,
       description: "O aventureiro explora o mundo com curiosidade e coragem.",
-      icon: <Camera className="w-6 h-6" />,
+      icon: <MapPin className="w-6 h-6" />,
       color: "bg-balloon-blue"
     },
     {
       id: 13,
       title: "O Sorriso do Aventureiro",
-      date: "10 Meses",
       image: img13,
       description: "Definitivamente o sorriso mais radiante já visto.",
-      icon: <PartyPopper className="w-6 h-6" />,
+      icon: <SunIcon className="w-6 h-6" />,
       color: "bg-balloon-green"
+    },
+    {
+      id: 15,
+      title: "Fugindo do frio",
+      image: img15,
+      description: "Micael se aquece no colo do pai.",
+      icon: <ThermometerSnowflake className="w-6 h-6" />,
+      color: "bg-balloon-blue"
+    },
+    {
+      id: 16,
+      title: "O Aventureiro Aton",
+      image: img16,
+      description: "Aton nos permite um vislumbre de sua essência.",
+      icon: <User className="w-6 h-6" />,
+      color: "bg-balloon-blue"
+    },
+    {
+      id: 17,
+      title: "Soninho da Tarde",
+      image: img17,
+      description: "Pois é preciso energia para as próximas aventuras.",
+      icon: <MoonStar className="w-6 h-6" />,
+      color: "bg-balloon-blue"
+    },
+    {
+      id: 18,
+      title: "Aton e Ian visitam o Amapá",
+      image: img18,
+      description: "Os aventureiros da família saem em uma viagem épica até as famosas Terras Tucujus.",
+      icon: <Plane className="w-6 h-6" />,
+      color: "bg-balloon-blue"
+    },
+    {
+      id: 19,
+      title: "Pelo céu azul",
+      image: img19,
+      description: "Micael em contraste com o céu nos braços de seu pai.",
+      icon: <Cloud className="w-6 h-6" />,
+      color: "bg-balloon-blue"
+    },
+    {
+      id: 20,
+      title: "Diversão em Família",
+      image: img21,
+      description: "Micael e Ian se divertem juntos, criando memórias inesquecíveis em família.",
+      icon: <Users className="w-6 h-6" />,
+      color: "bg-balloon-blue"
     }
   ];
 
@@ -184,9 +231,6 @@ const AdventurePage = () => {
                 {/* Content below image */}
                 <div className="p-6 text-center">
                   <div className="flex flex-col items-center gap-2 mb-3">
-                    <span className="text-xs font-heading font-bold uppercase tracking-widest text-primary-foreground px-3 py-1 bg-primary rounded-full">
-                      {event.date}
-                    </span>
                     <h4 className="text-2xl font-heading font-extrabold text-foreground mt-2">
                       {event.title}
                     </h4>

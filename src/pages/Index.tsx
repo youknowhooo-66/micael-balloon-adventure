@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import HotAirBalloon from "@/components/HotAirBalloon";
 import Cloud from "@/components/Cloud";
 import Sun from "@/components/Sun";
@@ -7,11 +7,37 @@ import InvitationCard from "@/components/InvitationCard";
 import GiftSuggestions from "@/components/GiftSuggestions";
 import AdventurePage from "@/components/AdventurePage"; 
 import skyBg from "@/assets/voltamundo.png";
+import audioFile from "@/assets/voltamundo.mp3";
 
 type Tab = "convite" | "sugestoes" | "aventura";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState<Tab>("convite");
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    audioRef.current = new Audio(audioFile);
+    audioRef.current.loop = true;
+
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current = null;
+      }
+    };
+  }, []);
+
+  const toggleMusic = () => {
+    if (!audioRef.current) return;
+
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play().catch(err => console.log("Erro ao reproduzir áudio:", err));
+    }
+    setIsPlaying(!isPlaying);
+  };
 
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -121,10 +147,18 @@ const Index = () => {
           )}
         </div>
 
-        {/* Footer */}
-        <p className="mt-8 md:mt-12 text-white font-body text-[10px] md:text-sm text-center drop-shadow-md bg-black/10 px-4 py-1 rounded-full backdrop-blur-sm mx-4">
-          🎶 Volta ao Mundo num Balão — Hélio Ziskind 🎶
-        </p>
+        {/* Footer com Música */}
+        <button 
+          onClick={toggleMusic}
+          className={`mt-8 md:mt-12 text-white font-body text-[10px] md:text-sm text-center drop-shadow-md bg-black/20 hover:bg-black/40 transition-all px-6 py-2 rounded-full backdrop-blur-md mx-4 cursor-pointer flex items-center justify-center gap-3 group border border-white/10 ${isPlaying ? 'ring-2 ring-white/40 bg-black/40' : ''}`}
+        >
+          <span className={`${isPlaying ? 'animate-bounce' : ''}`}>🎶</span>
+          <span className="font-medium tracking-wide">
+            {isPlaying ? "Tocando agora 🎈" : "Clique para música temática 🎈"}
+          </span>
+          <span className="opacity-60 hidden sm:inline">| Volta ao Mundo num Balão</span>
+          <span className={`${isPlaying ? 'animate-bounce [animation-delay:0.2s]' : ''}`}>🎶</span>
+        </button>
       </div>
     </div>
   );

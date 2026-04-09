@@ -98,6 +98,14 @@ export default {
         "sun-pulse": "sun-pulse 4s ease-in-out infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "flip-in-ver": "flip-in-ver 0.6s ease-out", // Added flip-in-ver animation
+      },
+      animationDelay: {
+        100: '100ms',
+        200: '200ms',
+        300: '300ms',
+        400: '400ms',
+        500: '500ms',
       },
       keyframes: {
         "accordion-down": {

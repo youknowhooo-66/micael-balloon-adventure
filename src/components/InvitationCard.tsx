@@ -60,16 +60,16 @@ const InvitationCard = () => {
 
       {/* Details */}
       <div className="space-y-4 text-left bg-muted/50 rounded-2xl p-6">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 animate-in fade-in slide-in-from-left duration-500 delay-100">
           <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center">
             <CalendarDays className="w-5 h-5 text-primary" />
           </div>
           <div>
             <p className="text-xs text-muted-foreground font-body uppercase tracking-wider">Data</p>
-            <p className="font-semibold font-body text-foreground">Sábado, 9 de Maio de 2026</p>
+            <p className="font-semibold font-body text-foreground">Domingo, 10 de Maio de 2026</p>
           </div>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 animate-in fade-in slide-in-from-left duration-500 delay-200">
           <div className="w-10 h-10 rounded-full bg-secondary/15 flex items-center justify-center">
             <Clock className="w-5 h-5 text-secondary" />
           </div>
@@ -78,7 +78,7 @@ const InvitationCard = () => {
             <p className="font-semibold font-body text-foreground">16:30h</p>
           </div>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 animate-in fade-in slide-in-from-left duration-500 delay-300">
           <div className="w-10 h-10 rounded-full bg-accent/15 flex items-center justify-center">
             <MapPin className="w-5 h-5 text-accent" />
           </div>
