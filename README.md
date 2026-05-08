@@ -1,73 +1,85 @@
-# React + TypeScript + Vite
+# 🎈 Micael Balloon Adventure
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Página interativa e divertida para o convite de aniversário de 1 ano do Micael!
 
-Currently, two official plugins are available:
+## 📋 Descrição
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Este é um site especial criado para celebrar o primeiro aniversário do Micael. A página é totalmente responsiva e foi desenvolvida com tecnologias modernas para proporcionar uma experiência visual agradável e interativa.
 
-## React Compiler
+## 🌐 Visite o Site
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🎉 **[Acesse o convite do Micael aqui!](https://micael-balloon-adventure-8aw8pamdi-youknowhooo-66s-projects.vercel.app/)**
 
-## Expanding the ESLint configuration
+## 🚀 Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React** - Biblioteca JavaScript para construção da interface
+- **TypeScript** - Tipagem estática para maior segurança
+- **Vite** - Ferramenta de build rápida e moderna
+- **CSS** - Estilização customizada
+- **ESLint** - Qualidade e padronização de código
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Instalação
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Pré-requisitos
+- Node.js (v16 ou superior)
+- npm ou yarn
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Passo a passo
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/youknowhooo-66/micael-balloon-adventure.git
+cd micael-balloon-adventure
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Instale as dependências:
+```bash
+npm install
+```
+
+3. Inicie o servidor de desenvolvimento:
+```bash
+npm run dev
+```
+
+4. Abra seu navegador e acesse `http://localhost:5173`
+
+## 🛠️ Scripts Disponíveis
+
+- `npm run dev` - Inicia o servidor de desenvolvimento com HMR
+- `npm run build` - Cria a build otimizada para produção
+- `npm run preview` - Visualiza a build de produção localmente
+- `npm run lint` - Executa a verificação de código com ESLint
+
+## 🎨 Funcionalidades
+
+- ✨ Design responsivo e mobile-friendly
+- 🎈 Elementos interativos e temáticos
+- 📱 Otimizado para todos os dispositivos
+- 🎯 Experiência de usuário intuitiva
+
+## 📝 Notas de Desenvolvimento
+
+Este projeto foi criado usando o template Vite com React + TypeScript. A configuração de ESLint está preparada para desenvolvimento e pode ser expandida com regras de tipo mais rigorosas conforme necessário.
+
+### Expandindo ESLint
+
+Para ativar regras mais rigorosas em produção, você pode atualizar o `eslint.config.js`:
 
 ```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+tseslint.configs.recommendedTypeChecked,
+// ou para regras mais rigorosas:
+tseslint.configs.strictTypeChecked,
 ```
+
+## 🎂 Dedicado
+
+Com muito carinho para o Micael no seu primeiro ano de vida! 🎉
+
+## 📄 Licença
+
+Este projeto é de uso pessoal e familiar.
+
+---
+
+Desenvolvido com ❤️
